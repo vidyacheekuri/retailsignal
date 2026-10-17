@@ -9,7 +9,7 @@
 
 **A complete retail analytics project that turns 541,909 real transaction lines into trusted revenue reporting, customer retention analysis, and a capacity-aware customer review queue.**
 
-Built by **Sree Vidya Cheekuri**. Historical portfolio case study using public data; not an employer project or a production deployment.
+Historical portfolio case study using public data.
 
 [Business findings](reports/executive_brief.md) · [Architecture](docs/architecture.md) · [Model card](docs/model_card.md) · [Power BI setup](powerbi/README.md)
 
