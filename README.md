@@ -25,6 +25,10 @@ The deliverable is a decision system: an auditable Python/SQL pipeline, a local 
 
 ## Explore the dashboard
 
+**[▶ Watch the full dashboard tour (2 min 35 sec)](https://raw.githubusercontent.com/vidyacheekuri/retailsignal/main/docs/assets/retailsignal-dashboard-tour.mp4)** · [Video details and chapters](docs/dashboard_video.md)
+
+Silent screen recording of all six workspaces, including scrolling, a campaign-scenario adjustment, model evidence, data-quality checks, and a live analyst question.
+
 ![RetailSignal analytical overview generated from the project data](docs/assets/analytical-overview.svg)
 
 *Portable analytical snapshot; launch the app for interactive filtering and customer review.*
