@@ -11,7 +11,7 @@
 
 Built by **Sree Vidya Cheekuri**. Historical portfolio case study using public data; not an employer project or a production deployment.
 
-[Business findings](reports/executive_brief.md) · [Architecture](docs/architecture.md) · [Model card](docs/model_card.md) · [Power BI setup](powerbi/README.md) · [Interview walkthrough](docs/interview_walkthrough.md)
+[Business findings](reports/executive_brief.md) · [Architecture](docs/architecture.md) · [Model card](docs/model_card.md) · [Power BI setup](powerbi/README.md)
 
 ## The business problem
 
@@ -133,7 +133,7 @@ scripts/                  Reproducible Power BI generation
 reports/                  Quality, evaluation, executive brief, validation evidence
 data/exports/             Small, versioned analysis and scoring outputs
 tests/                    Unit, integration, artifact, and dashboard tests
-docs/                     Requirements, contracts, model card, interview guide
+docs/                     Requirements, contracts, and model card
 ```
 
 ## Run and share
