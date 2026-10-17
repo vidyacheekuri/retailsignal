@@ -1,0 +1,10 @@
+.git
+.venv
+data/raw
+data/staging
+data/warehouse.duckdb
+models
+__pycache__
+.pytest_cache
+.env
+.env.*

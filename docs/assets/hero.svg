@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+<rect width="1200" height="300" rx="20" fill="#102a38"/>
+<path d="M850 250L910 185L960 208L1020 95L1085 125L1150 48" fill="none" stroke="#6ee7c0" stroke-width="5" opacity=".8"/>
+<path d="M850 265L910 220L960 238L1020 177L1085 185L1150 130" fill="none" stroke="#527e98" stroke-width="3"/>
+<text x="54" y="58" fill="#6ee7c0" font-family="Arial,sans-serif" font-size="13" letter-spacing="4">REVENUE · RETENTION · DECISIONS</text>
+<text x="50" y="139" fill="white" font-family="Arial,sans-serif" font-size="66" font-weight="700">RetailSignal</text>
+<text x="54" y="179" fill="#c2d1d7" font-family="Arial,sans-serif" font-size="21">From raw transactions to decisions you can defend.</text>
+<text x="54" y="249" fill="#6ee7c0" font-family="Arial,sans-serif" font-size="16">541K source rows</text>
+<text x="260" y="249" fill="#c2d1d7" font-family="Arial,sans-serif" font-size="16">Python + SQL + Power BI + ML</text>
+<text x="610" y="249" fill="#c2d1d7" font-family="Arial,sans-serif" font-size="16">Sree Vidya Cheekuri</text>
+</svg>

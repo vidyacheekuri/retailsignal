@@ -1,0 +1,19 @@
+{
+  "source_rows": 541909,
+  "accepted_rows": 534129,
+  "rejected_rows": 7780,
+  "exact_duplicates": 5268,
+  "invalid_transactions_excluding_duplicates": 2512,
+  "accepted_missing_customer": 132565,
+  "invalid_customer_ids": 0,
+  "subpenny_price_rows": 4,
+  "rounding_net_difference_gbp": -0.004000000069183714,
+  "min_timestamp": "2010-12-01 08:26:00",
+  "max_timestamp": "2011-12-09 12:50:00",
+  "gross_gbp": 10642110.8,
+  "credits_gbp": 893979.73,
+  "net_gbp": 9748131.07,
+  "source_url": "https://archive.ics.uci.edu/static/public/352/online%2Bretail.zip",
+  "sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "pipeline_version": "1.0.0"
+}

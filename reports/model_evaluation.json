@@ -1,0 +1,30 @@
+{
+  "selected_model": "Logistic regression",
+  "train_snapshots": [
+    "2011-04-01",
+    "2011-05-01",
+    "2011-06-01"
+  ],
+  "validation_date": "2011-08-01",
+  "test_date": "2011-10-01",
+  "score_date": "2011-12-10",
+  "train_rows": 7227,
+  "validation_customers": 2771,
+  "test": {
+    "customers": 2925,
+    "positive_rate": 0.3087179487179487,
+    "average_precision": 0.5540032340247024,
+    "roc_auc": 0.6943521594684385,
+    "brier_score": 0.18739303455040537,
+    "precision_at_20pct": 0.5811965811965812,
+    "lift_at_20pct": 1.8826135105204873,
+    "capture_at_20pct": 0.37652270210409744
+  },
+  "test_ap_ci95": [
+    0.5166176789858157,
+    0.5873662451874443
+  ],
+  "recency_baseline_ap": 0.35075456116536874,
+  "scored_customers": 3477,
+  "seed": 42
+}

@@ -1,0 +1,431 @@
+{
+  "name": "RetailSignal",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "en-GB",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-GB",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/retailsignal/data/exports\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "tables": [
+      {
+        "name": "Date",
+        "columns": [
+          {
+            "name": "date_key",
+            "dataType": "dateTime",
+            "sourceColumn": "date_key",
+            "summarizeBy": "none",
+            "isKey": true,
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_number",
+            "dataType": "int64",
+            "sourceColumn": "month_number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "string",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "weekday",
+            "dataType": "string",
+            "sourceColumn": "weekday",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Date",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/dim_date.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"date_key\", type date}, {\"year\", Int64.Type}, {\"month_number\", Int64.Type}, {\"month\", type text}, {\"weekday\", type text}}, \"en-GB\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "dataCategory": "Time"
+      },
+      {
+        "name": "Country",
+        "columns": [
+          {
+            "name": "country",
+            "dataType": "string",
+            "sourceColumn": "country",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Country",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/dim_country.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"country\", type text}}, \"en-GB\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DailyRevenue",
+        "columns": [
+          {
+            "name": "date_key",
+            "dataType": "dateTime",
+            "sourceColumn": "date_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "country",
+            "dataType": "string",
+            "sourceColumn": "country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "gross_revenue",
+            "dataType": "double",
+            "sourceColumn": "gross_revenue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "credits",
+            "dataType": "double",
+            "sourceColumn": "credits",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "net_revenue",
+            "dataType": "double",
+            "sourceColumn": "net_revenue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "orders",
+            "dataType": "int64",
+            "sourceColumn": "orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "known_customers",
+            "dataType": "int64",
+            "sourceColumn": "known_customers",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "anonymous_gross",
+            "dataType": "double",
+            "sourceColumn": "anonymous_gross",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "line_count",
+            "dataType": "int64",
+            "sourceColumn": "line_count",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DailyRevenue",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/mart_daily_country.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"date_key\", type date}, {\"country\", type text}, {\"gross_revenue\", type number}, {\"credits\", type number}, {\"net_revenue\", type number}, {\"orders\", Int64.Type}, {\"known_customers\", Int64.Type}, {\"anonymous_gross\", type number}, {\"line_count\", Int64.Type}}, \"en-GB\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Gross Revenue",
+            "expression": "SUM(DailyRevenue[gross_revenue])",
+            "formatString": "\u00a3#,0.00"
+          },
+          {
+            "name": "Credits",
+            "expression": "SUM(DailyRevenue[credits])",
+            "formatString": "\u00a3#,0.00"
+          },
+          {
+            "name": "Net Revenue",
+            "expression": "[Gross Revenue] - [Credits]",
+            "formatString": "\u00a3#,0.00"
+          },
+          {
+            "name": "Credit Ratio",
+            "expression": "DIVIDE([Credits], [Gross Revenue])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Sales Orders",
+            "expression": "SUM(DailyRevenue[orders])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Average Order Value",
+            "expression": "DIVIDE([Gross Revenue], [Sales Orders])",
+            "formatString": "\u00a3#,0.00"
+          },
+          {
+            "name": "Identified Revenue Share",
+            "expression": "1 - DIVIDE(SUM(DailyRevenue[anonymous_gross]), [Gross Revenue])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Prior Month Net",
+            "expression": "CALCULATE([Net Revenue], DATEADD('Date'[date_key], -1, MONTH))",
+            "formatString": "\u00a3#,0.00"
+          },
+          {
+            "name": "Net MoM Growth",
+            "expression": "DIVIDE([Net Revenue] - [Prior Month Net], [Prior Month Net])",
+            "formatString": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Cohorts",
+        "columns": [
+          {
+            "name": "cohort",
+            "dataType": "string",
+            "sourceColumn": "cohort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_index",
+            "dataType": "int64",
+            "sourceColumn": "month_index",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cohort_size",
+            "dataType": "int64",
+            "sourceColumn": "cohort_size",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "active_customers",
+            "dataType": "int64",
+            "sourceColumn": "active_customers",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "retention",
+            "dataType": "double",
+            "sourceColumn": "retention",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Cohorts",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/mart_cohorts.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"cohort\", type text}, {\"month_index\", Int64.Type}, {\"cohort_size\", Int64.Type}, {\"active_customers\", Int64.Type}, {\"retention\", type number}}, \"en-GB\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Cohort Retention",
+            "expression": "IF(HASONEVALUE(Cohorts[month_index]), DIVIDE(SUM(Cohorts[active_customers]), SUM(Cohorts[cohort_size])))",
+            "formatString": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Customers",
+        "columns": [
+          {
+            "name": "customer_id",
+            "dataType": "string",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "orders_180d",
+            "dataType": "int64",
+            "sourceColumn": "orders_180d",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "gross_180d",
+            "dataType": "double",
+            "sourceColumn": "gross_180d",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "products_180d",
+            "dataType": "int64",
+            "sourceColumn": "products_180d",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "active_days_180d",
+            "dataType": "int64",
+            "sourceColumn": "active_days_180d",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "recency_days",
+            "dataType": "double",
+            "sourceColumn": "recency_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tenure_days",
+            "dataType": "double",
+            "sourceColumn": "tenure_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "aov_180d",
+            "dataType": "double",
+            "sourceColumn": "aov_180d",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "orders_30d",
+            "dataType": "int64",
+            "sourceColumn": "orders_30d",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "credits_180d",
+            "dataType": "double",
+            "sourceColumn": "credits_180d",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "credit_ratio",
+            "dataType": "double",
+            "sourceColumn": "credit_ratio",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "as_of",
+            "dataType": "dateTime",
+            "sourceColumn": "as_of",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "segment",
+            "dataType": "string",
+            "sourceColumn": "segment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "repeat_probability",
+            "dataType": "double",
+            "sourceColumn": "repeat_probability",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "priority_rank",
+            "dataType": "int64",
+            "sourceColumn": "priority_rank",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customers",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/customer_scores.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"customer_id\", type text}, {\"orders_180d\", Int64.Type}, {\"gross_180d\", type number}, {\"products_180d\", Int64.Type}, {\"active_days_180d\", Int64.Type}, {\"recency_days\", type number}, {\"tenure_days\", type number}, {\"aov_180d\", type number}, {\"orders_30d\", Int64.Type}, {\"credits_180d\", type number}, {\"credit_ratio\", type number}, {\"as_of\", type date}, {\"segment\", type text}, {\"repeat_probability\", type number}, {\"priority_rank\", Int64.Type}}, \"en-GB\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Scored Customers",
+            "expression": "COUNTROWS(Customers)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Mean Repeat Propensity",
+            "expression": "AVERAGE(Customers[repeat_probability])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Historical Customer Gross",
+            "expression": "SUM(Customers[gross_180d])",
+            "formatString": "\u00a3#,0.00"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "DailyRevenue_Date",
+        "fromTable": "DailyRevenue",
+        "fromColumn": "date_key",
+        "toTable": "Date",
+        "toColumn": "date_key",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "DailyRevenue_Country",
+        "fromTable": "DailyRevenue",
+        "fromColumn": "country",
+        "toTable": "Country",
+        "toColumn": "country",
+        "crossFilteringBehavior": "oneDirection"
+      }
+    ]
+  }
+}

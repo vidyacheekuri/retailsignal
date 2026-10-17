@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#f5f8f9"/>
+<rect x="0" y="0" width="240" height="900" rx="0" fill="#101f2e"/>
+<text x="28" y="65" font-family="Arial,sans-serif" font-size="26" fill="#ffffff" font-weight="700">◈ RetailSignal</text>
+<text x="28" y="97" font-family="Arial,sans-serif" font-size="11" fill="#7fb6b5" font-weight="400">DECISION INTELLIGENCE</text>
+<rect x="18" y="132" width="204" height="39" rx="8" fill="#244353"/>
+<text x="31" y="157" font-family="Arial,sans-serif" font-size="16" fill="#ffffff" font-weight="400">Revenue overview</text>
+<text x="31" y="206" font-family="Arial,sans-serif" font-size="16" fill="#c2d1d7" font-weight="400">Customer retention</text>
+<text x="31" y="255" font-family="Arial,sans-serif" font-size="16" fill="#c2d1d7" font-weight="400">Decision lab</text>
+<text x="31" y="304" font-family="Arial,sans-serif" font-size="16" fill="#c2d1d7" font-weight="400">Model evidence</text>
+<text x="31" y="353" font-family="Arial,sans-serif" font-size="16" fill="#c2d1d7" font-weight="400">Data trust</text>
+<text x="31" y="402" font-family="Arial,sans-serif" font-size="16" fill="#c2d1d7" font-weight="400">Analyst desk</text>
+<text x="28" y="680" font-family="Arial,sans-serif" font-size="11" fill="#77d8bd" font-weight="400">PUBLIC DATA CASE STUDY</text>
+<text x="28" y="714" font-family="Arial,sans-serif" font-size="15" fill="#c2d1d7" font-weight="400">Dec 2010 – Dec 2011</text>
+<text x="28" y="745" font-family="Arial,sans-serif" font-size="15" fill="#c2d1d7" font-weight="400">Currency: GBP (£)</text>
+<text x="28" y="831" font-family="Arial,sans-serif" font-size="15" fill="#ffffff" font-weight="400">Sree Vidya Cheekuri</text>
+<rect x="270" y="26" width="1140" height="158" rx="12" fill="#102a38"/>
+<text x="300" y="62" font-family="Arial,sans-serif" font-size="12" fill="#6ee7c0" font-weight="700">RETAILSIGNAL / ANALYTICAL SNAPSHOT</text>
+<text x="300" y="113" font-family="Arial,sans-serif" font-size="40" fill="#ffffff" font-weight="700">Know where value flows.</text>
+<text x="300" y="151" font-family="Arial,sans-serif" font-size="18" fill="#c2d1d7" font-weight="400">A reconciled view of revenue, customer coverage, and predictive evidence.</text>
+<rect x="270" y="207" width="270" height="111" rx="12" fill="#ffffff"/>
+<text x="290" y="240" font-family="Arial,sans-serif" font-size="12" fill="#627781" font-weight="400">NET REVENUE</text>
+<text x="290" y="286" font-family="Arial,sans-serif" font-size="32" fill="#173442" font-weight="700">£9.75M</text>
+<rect x="560" y="207" width="270" height="111" rx="12" fill="#ffffff"/>
+<text x="580" y="240" font-family="Arial,sans-serif" font-size="12" fill="#627781" font-weight="400">GROSS REVENUE</text>
+<text x="580" y="286" font-family="Arial,sans-serif" font-size="32" fill="#173442" font-weight="700">£10.64M</text>
+<rect x="850" y="207" width="270" height="111" rx="12" fill="#ffffff"/>
+<text x="870" y="240" font-family="Arial,sans-serif" font-size="12" fill="#627781" font-weight="400">CREDIT / GROSS</text>
+<text x="870" y="286" font-family="Arial,sans-serif" font-size="32" fill="#173442" font-weight="700">8.4%</text>
+<rect x="1140" y="207" width="270" height="111" rx="12" fill="#ffffff"/>
+<text x="1160" y="240" font-family="Arial,sans-serif" font-size="12" fill="#627781" font-weight="400">SALES ORDERS</text>
+<text x="1160" y="286" font-family="Arial,sans-serif" font-size="32" fill="#173442" font-weight="700">19,960</text>
+<rect x="270" y="342" width="704" height="305" rx="12" fill="#ffffff"/>
+<text x="292" y="378" font-family="Arial,sans-serif" font-size="22" fill="#173442" font-weight="700">Monthly revenue</text>
+<text x="292" y="404" font-family="Arial,sans-serif" font-size="12" fill="#627781" font-weight="400">December 2011 is partial</text>
+<path d="M330 600.0H948" stroke="#eaf0f2"/>
+<text x="284" y="604.0" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">0.0M</text>
+<path d="M330 545.0H948" stroke="#eaf0f2"/>
+<text x="284" y="549.0" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">0.5M</text>
+<path d="M330 490.0H948" stroke="#eaf0f2"/>
+<text x="284" y="494.0" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">1.0M</text>
+<path d="M330 435.0H948" stroke="#eaf0f2"/>
+<text x="284" y="439.0" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">1.5M</text>
+<polyline points="335,509.64 385,524.12 435,542.52 485,521.22 535,540.93 585,515.38 635,516.34 685,521.01 735,516.64 785,483.79 835,473.36 885,434.57 935,529.84" fill="none" stroke="#0d9f83" stroke-width="3"/>
+<polyline points="335,517.86 385,538.57 435,545.33 485,524.98 535,545.84 585,520.57 635,524.10 685,525.18 735,522.61 785,488.06 835,482.37 885,439.82 935,552.40" fill="none" stroke="#2e5b8c" stroke-width="3"/>
+<text x="325" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Dec</text>
+<text x="375" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Jan</text>
+<text x="425" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Feb</text>
+<text x="475" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Mar</text>
+<text x="525" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Apr</text>
+<text x="575" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">May</text>
+<text x="625" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Jun</text>
+<text x="675" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Jul</text>
+<text x="725" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Aug</text>
+<text x="775" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Sep</text>
+<text x="825" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Oct</text>
+<text x="875" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Nov</text>
+<text x="925" y="625" font-family="Arial,sans-serif" font-size="10" fill="#627781" font-weight="400">Dec</text>
+<text x="710" y="403" font-family="Arial,sans-serif" font-size="12" fill="#0d9f83" font-weight="400">Gross</text>
+<text x="790" y="403" font-family="Arial,sans-serif" font-size="12" fill="#2e5b8c" font-weight="400">Net</text>
+<rect x="994" y="342" width="416" height="305" rx="12" fill="#ffffff"/>
+<text x="1016" y="378" font-family="Arial,sans-serif" font-size="22" fill="#173442" font-weight="700">Markets that matter</text>
+<text x="1016" y="410" font-family="Arial,sans-serif" font-size="13" fill="#173442" font-weight="400">United Kingdom</text>
+<rect x="1125" y="398" width="205.0" height="17" rx="3" fill="#0d9f83"/>
+<text x="1340" y="410" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">8.19M</text>
+<text x="1016" y="454" font-family="Arial,sans-serif" font-size="13" fill="#173442" font-weight="400">Netherlands</text>
+<rect x="1125" y="442" width="7.1258783539982025" height="17" rx="3" fill="#0d9f83"/>
+<text x="1340" y="454" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">0.28M</text>
+<text x="1016" y="498" font-family="Arial,sans-serif" font-size="13" fill="#173442" font-weight="400">EIRE</text>
+<rect x="1125" y="486" width="6.583463413381464" height="17" rx="3" fill="#0d9f83"/>
+<text x="1340" y="498" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">0.26M</text>
+<text x="1016" y="542" font-family="Arial,sans-serif" font-size="13" fill="#173442" font-weight="400">Germany</text>
+<rect x="1125" y="530" width="5.545004560428551" height="17" rx="3" fill="#0d9f83"/>
+<text x="1340" y="542" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">0.22M</text>
+<text x="1016" y="586" font-family="Arial,sans-serif" font-size="13" fill="#173442" font-weight="400">France</text>
+<rect x="1125" y="574" width="4.939401799844413" height="17" rx="3" fill="#0d9f83"/>
+<text x="1340" y="586" font-family="Arial,sans-serif" font-size="11" fill="#627781" font-weight="400">0.20M</text>
+<rect x="270" y="671" width="557" height="163" rx="12" fill="#ffffff"/>
+<text x="292" y="707" font-family="Arial,sans-serif" font-size="22" fill="#173442" font-weight="700">The identity gap</text>
+<text x="292" y="751" font-family="Arial,sans-serif" font-size="32" fill="#0d9f83" font-weight="700">16.5%</text>
+<text x="400" y="750" font-family="Arial,sans-serif" font-size="16" fill="#173442" font-weight="400">of gross revenue has no customer ID</text>
+<text x="292" y="789" font-family="Arial,sans-serif" font-size="14" fill="#627781" font-weight="400">Keep it in financial totals; exclude individual-level modeling.</text>
+<rect x="847" y="671" width="563" height="163" rx="12" fill="#ffffff"/>
+<text x="869" y="707" font-family="Arial,sans-serif" font-size="22" fill="#173442" font-weight="700">Model evidence, not promised ROI</text>
+<text x="869" y="751" font-family="Arial,sans-serif" font-size="32" fill="#2e5b8c" font-weight="700">1.88×</text>
+<text x="985" y="750" font-family="Arial,sans-serif" font-size="16" fill="#173442" font-weight="400">repeat-buyer lift in the highest-scored 20%</text>
+<text x="869" y="789" font-family="Arial,sans-serif" font-size="14" fill="#627781" font-weight="400">Temporal holdout · AP 0.554 · Recency baseline AP 0.351</text>
+<text x="270" y="869" font-family="Arial,sans-serif" font-size="13" fill="#627781" font-weight="400">Generated from published project outputs. Interactive filters and review queues are available in the Streamlit app.</text>
+</svg>

@@ -1,0 +1,38 @@
+-- Table: DailyRevenue
+Gross Revenue = SUM(DailyRevenue[gross_revenue])
+
+-- Table: DailyRevenue
+Credits = SUM(DailyRevenue[credits])
+
+-- Table: DailyRevenue
+Net Revenue = [Gross Revenue] - [Credits]
+
+-- Table: DailyRevenue
+Credit Ratio = DIVIDE([Credits], [Gross Revenue])
+
+-- Table: DailyRevenue
+Sales Orders = SUM(DailyRevenue[orders])
+
+-- Table: DailyRevenue
+Average Order Value = DIVIDE([Gross Revenue], [Sales Orders])
+
+-- Table: DailyRevenue
+Identified Revenue Share = 1 - DIVIDE(SUM(DailyRevenue[anonymous_gross]), [Gross Revenue])
+
+-- Table: DailyRevenue
+Prior Month Net = CALCULATE([Net Revenue], DATEADD('Date'[date_key], -1, MONTH))
+
+-- Table: DailyRevenue
+Net MoM Growth = DIVIDE([Net Revenue] - [Prior Month Net], [Prior Month Net])
+
+-- Table: Cohorts
+Cohort Retention = IF(HASONEVALUE(Cohorts[month_index]), DIVIDE(SUM(Cohorts[active_customers]), SUM(Cohorts[cohort_size])))
+
+-- Table: Customers
+Scored Customers = COUNTROWS(Customers)
+
+-- Table: Customers
+Mean Repeat Propensity = AVERAGE(Customers[repeat_probability])
+
+-- Table: Customers
+Historical Customer Gross = SUM(Customers[gross_180d])

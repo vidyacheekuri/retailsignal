@@ -1,0 +1,5 @@
+{
+  "schema_validated_files": 23,
+  "desktop_refresh_tested": false,
+  "note": "JSON schema and local model-binding checks passed. Windows Power BI Desktop refresh/render remains unverified."
+}

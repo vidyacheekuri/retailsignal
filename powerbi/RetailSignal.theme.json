@@ -1,0 +1,12 @@
+{
+  "name": "RetailSignal",
+  "dataColors": [
+    "#0D9F83",
+    "#2E5B8C",
+    "#E49B49",
+    "#B96B6B"
+  ],
+  "background": "#F5F8F9",
+  "foreground": "#173442",
+  "tableAccent": "#0D9F83"
+}

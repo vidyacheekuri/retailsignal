@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retailsignal"
+version = "1.0.0"
+description = "From retail transactions to revenue intelligence and customer decisions"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2,<4", "numpy>=1.26,<3", "duckdb>=1.2,<2",
+  "scikit-learn>=1.5,<2", "openpyxl>=3.1,<4", "joblib>=1.4,<2",
+  "streamlit>=1.40,<2", "plotly>=5.24,<8", "pyarrow>=17,<27"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+retailsignal = "retailsignal.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
