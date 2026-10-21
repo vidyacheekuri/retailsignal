@@ -112,7 +112,7 @@ flowchart LR
 
 Open `powerbi/RetailSignal.pbip` in Windows Power BI Desktop. Set the **DataFolder** parameter to this repository's `data/exports` directory, then refresh. The package contains **3 pages, 16 visuals, 13 DAX measures, 5 model tables, and 2 relationships**. The date and country dimensions filter the daily revenue fact; cohorts and customer snapshots intentionally use separate grains.
 
-**Validation boundary:** 23 report JSON files passed Microsoft's published schemas and automated field-binding checks pass. Desktop refresh, DAX execution, and rendering have not been verified on this macOS build host. The Streamlit dashboard is the fully executed and tested interactive deliverable. [Setup and validation checklist →](powerbi/README.md)
+**Validation:** 23 report JSON files pass Microsoft's published schemas, and automated field-binding checks pass. Power BI Desktop refresh, DAX execution and rendering are pending validation. The Streamlit dashboard has passed runtime and interaction tests. [Setup and validation checklist →](powerbi/README.md)
 
 ## Engineering practices
 
@@ -143,11 +143,11 @@ docs/                     Requirements, contracts, and model card
 ## Run and share
 
 - **Local:** use the quick start above.
-- **Container:** `docker build -t retailsignal .` then `docker run --rm -p 8501:8501 retailsignal`. The container configuration is supplied but was not executed on the build host.
-- **Streamlit Community Cloud:** deploy this repository with entrypoint `app.py` and Python 3.13. Deployment is optional and not claimed as completed.
+- **Container:** `docker build -t retailsignal .` then `docker run --rm -p 8501:8501 retailsignal`. Container runtime validation is pending.
+- **Streamlit Community Cloud:** deploy this repository with entrypoint `app.py` and Python 3.13. Hosted deployment is optional.
 
 ## Data attribution and licenses
 
 Chen, D. (2015). **Online Retail** [Dataset]. UCI Machine Learning Repository. [DOI: 10.24432/C5BW33](https://doi.org/10.24432/C5BW33). Data is licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This project cleans, aggregates, and models that data; the exported data and derived evidence retain this attribution. See [DATA_LICENSE.md](DATA_LICENSE.md).
 
-Original project code: [MIT](LICENSE). No private employer data, resume, personal contact information, or credentials are included.
+Project code: [MIT](LICENSE).

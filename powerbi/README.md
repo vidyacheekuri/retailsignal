@@ -31,7 +31,7 @@ The net month-over-month measure is provided for exploration, but December 2011 
 - 23 PBIR/report JSON files pass Microsoft's public JSON schemas.
 - Automated tests verify CSV columns, model relationships, and every visual's referenced table/field.
 - Python and SQL totals reconcile; all Streamlit pages execute.
-- **Not yet validated:** Power BI Desktop opening, Power Query refresh, DAX execution, and visual rendering. These require Windows Power BI Desktop, unavailable on the macOS build host. Schema validation does not prove runtime correctness.
+- **Not yet validated:** Power BI Desktop opening, Power Query refresh, DAX execution, and visual rendering. Complete these checks in Windows Power BI Desktop before marking the report accepted.
 
 Expected all-data cards after refresh: **£9,748,131.07 net**, **£10,642,110.80 gross**, **8.4004% credit ratio (8.4% displayed)**, and **19,960 sales orders**. Use `data/exports/mart_daily_country.csv` for exact comparisons.
 
