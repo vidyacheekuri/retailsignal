@@ -7,6 +7,8 @@
   <img alt="Power BI project" src="https://img.shields.io/badge/BI-Power%20BI%20%2B%20Streamlit-e49b49">
 </p>
 
+**[Open the live dashboard](https://retailsignal-vidya.streamlit.app/)** · Runs in your browser; no installation required.
+
 **A complete retail analytics project that turns 541,909 real transaction lines into trusted revenue reporting, customer retention analysis, and a capacity-aware customer review queue.**
 
 Historical portfolio case study using public data.
@@ -144,7 +146,7 @@ docs/                     Requirements, contracts, and model card
 
 - **Local:** use the quick start above.
 - **Container:** `docker build -t retailsignal .` then `docker run --rm -p 8501:8501 retailsignal`. Container runtime validation is pending.
-- **Streamlit Community Cloud:** deploy this repository with entrypoint `app.py` and Python 3.13. Hosted deployment is optional.
+- **Streamlit Community Cloud:** deploy this repository with entrypoint `app.py` and Python 3.13. The public dashboard is available at [retailsignal-vidya.streamlit.app](https://retailsignal-vidya.streamlit.app/).
 
 ## Data attribution and licenses
 
