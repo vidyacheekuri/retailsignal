@@ -15,6 +15,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
+notebook = ["nbclient>=0.10,<1", "nbformat>=5.10,<6", "ipykernel>=6,<8", "kaleido>=1,<2"]
 
 [project.scripts]
 retailsignal = "retailsignal.cli:main"

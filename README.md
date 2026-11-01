@@ -13,7 +13,7 @@
 
 Historical portfolio case study using public data.
 
-[Business findings](reports/executive_brief.md) · [Architecture](docs/architecture.md) · [Model card](docs/model_card.md) · [Power BI setup](powerbi/README.md)
+[Business findings](reports/executive_brief.md) · [Executed analysis notebook](notebooks/01_business_analysis.ipynb) · [Architecture](docs/architecture.md) · [Model card](docs/model_card.md) · [Power BI setup](powerbi/README.md)
 
 ## The business problem
 
@@ -73,6 +73,19 @@ Open the local URL printed by Streamlit. Python 3.13 is the tested environment. 
 | Latest historical scoring population | 3,477 customers | [Customer scores](data/exports/customer_scores.csv) |
 
 **These are historical analysis and predictive results, not realized revenue lift.** The model predicts natural repeat purchase; it does not estimate who will respond incrementally to an offer. Campaign economics in the dashboard are scenarios. See the [model card](docs/model_card.md) for uncertainty and limitations.
+
+## Guided exploratory analysis
+
+The [executed notebook](notebooks/01_business_analysis.ipynb) includes saved tables, ledger reconciliation, identity coverage, model comparisons, and two embedded charts visible on GitHub. It reads the committed marts and does not require the raw dataset.
+
+To rerun all six code cells and replace the saved outputs:
+
+```bash
+python -m pip install -e '.[notebook]'
+python scripts/execute_notebook.py
+```
+
+Chart export uses Kaleido and requires Chrome or Chromium. Both charts are saved as PNG outputs so readers can see them without running JavaScript or installing Python.
 
 ## Rebuild everything from source
 
