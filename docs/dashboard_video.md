@@ -2,6 +2,8 @@
 
 [▶ Watch or download the dashboard recording (MP4)](https://raw.githubusercontent.com/vidyacheekuri/retailsignal/main/docs/assets/retailsignal-dashboard-tour.mp4)
 
+**Earlier interface:** this recording predates the November 2026 redesign. See the [live dashboard](https://retailsignal-vidya.streamlit.app/) for the current design.
+
 A 2 minute 35 second silent tour of the running Streamlit dashboard, captured on October 17, 2026. The recording shows the dashboard in a compact browser layout using the public UCI Online Retail case-study data. No account or local installation is needed to watch.
 
 | Time | Workspace | Included in the recording |

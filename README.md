@@ -2,9 +2,9 @@
 
 <p align="center">
   <a href="https://github.com/vidyacheekuri/retailsignal/actions"><img alt="Automated checks" src="https://github.com/vidyacheekuri/retailsignal/actions/workflows/ci.yml/badge.svg"></a>
-  <img alt="Python 3.13" src="https://img.shields.io/badge/Python-3.13-2e5b8c">
-  <img alt="DuckDB + SQL" src="https://img.shields.io/badge/Warehouse-DuckDB%20%2B%20SQL-0d9f83">
-  <img alt="Power BI project" src="https://img.shields.io/badge/BI-Power%20BI%20%2B%20Streamlit-e49b49">
+  <img alt="Python 3.13" src="https://img.shields.io/badge/Python-3.13-262e33">
+  <img alt="DuckDB + SQL" src="https://img.shields.io/badge/Warehouse-DuckDB%20%2B%20SQL-e1572a">
+  <img alt="Power BI project" src="https://img.shields.io/badge/BI-Power%20BI%20%2B%20Streamlit-8b9dab">
 </p>
 
 **[Open the live dashboard](https://retailsignal-vidya.streamlit.app/)** · Runs in your browser; no installation required.
@@ -27,22 +27,20 @@ The deliverable is a decision system: an auditable Python/SQL pipeline, a local 
 
 ## Explore the dashboard
 
-**[▶ Watch the full dashboard tour (2 min 35 sec)](https://raw.githubusercontent.com/vidyacheekuri/retailsignal/main/docs/assets/retailsignal-dashboard-tour.mp4)** · [Video details and chapters](docs/dashboard_video.md)
+![RetailSignal revenue dashboard](docs/assets/dashboard-revenue.jpg)
 
-Silent screen recording of all six workspaces, including scrolling, a campaign-scenario adjustment, model evidence, data-quality checks, and a live analyst question.
+The dashboard uses a charcoal and burnt-orange palette, top navigation, and compact trading-report panels. Filter the revenue report by market and date, explore customer cohorts, or build a campaign shortlist. Figures remain in the source currency, GBP (£).
 
-![RetailSignal analytical overview generated from the project data](docs/assets/analytical-overview.svg)
-
-*Portable analytical snapshot; launch the app for interactive filtering and customer review.*
+[Earlier dashboard tour (2 min 35 sec)](https://raw.githubusercontent.com/vidyacheekuri/retailsignal/main/docs/assets/retailsignal-dashboard-tour.mp4) · [Video chapters](docs/dashboard_video.md). Recorded before the November 2026 visual redesign; the current interface is shown above.
 
 | Workspace | What it demonstrates |
 |---|---|
-| Revenue overview | Country/date filters, revenue bridge, trend analysis, identity coverage, CSV export |
-| Customer retention | Censored cohort heatmap and explainable behavior segments |
-| Decision lab | Capacity-aware shortlist, downloadable scores, explicit campaign assumptions |
-| Model evidence | Baselines, temporal splits, AP, lift, calibration, permutation importance, drift |
-| Data trust | Quarantine policy, source fingerprint, row and financial reconciliation |
-| Analyst desk | Reproducible business answers with supporting tables and an executive brief |
+| Revenue | Country/date filters, revenue bridge, trend analysis, identity coverage, CSV export |
+| Customers | Censored cohort heatmap and explainable behavior segments |
+| Campaign planner | Capacity-aware shortlist, downloadable scores, explicit campaign assumptions |
+| Model performance | Baselines, temporal splits, AP, lift, calibration, permutation importance, drift |
+| Data quality | Quarantine policy, source fingerprint, row and financial reconciliation |
+| Business questions | Reproducible business answers with supporting tables and an executive brief |
 
 **Try it locally without downloading the raw data.** Small, real-data-derived marts and evaluation artifacts are included in Git. No API key or paid service is required.
 
